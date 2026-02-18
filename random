@@ -1,11 +1,1 @@
-Title
 
-Improve Design of Prop Type List Default Value Selection Using React Select
-
-Description
-
-Currently, the Prop Type list default value selection is displayed using a basic UI design, which does not provide the best user experience.
-
-This ticket proposes improving the design by replacing the existing implementation with React Select to provide a more intuitive and user-friendly dropdown experience. Using React Select will enhance usability with better styling, search capability (if needed), improved accessibility, and consistent behavior across the UI.
-
-The goal of this ticket is purely UI enhancement — no functional logic changes are expected. The default value selection behavior will remain the same; only the visual and interaction design will be improved for better user experience.
