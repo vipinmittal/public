@@ -1,0 +1,34 @@
+The design is already implemented and I will provide a screenshot for reference.
+Your task is NOT to redesign anything — only implement the required behavior in the attached TSX file.
+
+Requirement:
+
+There are multiple repeating text input fields rendered as a list.
+
+Each item already has a drag handle in the UI.
+
+Implement drag-and-drop reordering functionality using the drag handle.
+
+Users must be able to:
+
+Click and drag using the handle.
+
+Move the item up or down in the list.
+
+Drop it to reorder the fields.
+
+The order of text fields should update immediately in the UI and state.
+
+Keep the existing design and styling unchanged.
+
+Do not refactor unrelated logic.
+
+Keep the solution clean, minimal, and aligned with existing TSX patterns.
+
+Expected outcome:
+
+Drag handles allow reordering of text fields.
+
+State updates correctly after reorder.
+
+No visual design changes.
