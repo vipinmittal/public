@@ -1,34 +1,31 @@
-The design is already implemented and I will provide a screenshot for reference.
-Your task is NOT to redesign anything — only implement the required behavior in the attached TSX file.
-
-Requirement:
-
-There are multiple repeating text input fields rendered as a list.
-
-Each item already has a drag handle in the UI.
-
-Implement drag-and-drop reordering functionality using the drag handle.
-
-Users must be able to:
-
-Click and drag using the handle.
-
-Move the item up or down in the list.
-
-Drop it to reorder the fields.
-
-The order of text fields should update immediately in the UI and state.
-
-Keep the existing design and styling unchanged.
-
-Do not refactor unrelated logic.
-
-Keep the solution clean, minimal, and aligned with existing TSX patterns.
-
-Expected outcome:
-
-Drag handles allow reordering of text fields.
-
-State updates correctly after reorder.
-
-No visual design changes.
+You are a senior DevOps + Drupal + Cypress expert.
+Your task is to analyze and resolve a database mismatch issue occurring during Cypress test execution.
+Project Context
+Application: Drupal (PHP), using Canvas module
+Local environment: DDEV
+Database: MySQL
+Database configuration: settings.ddev.php
+The application runs correctly in the browser via DDEV
+Tests are executed using Cypress
+Problem Statement
+When running Cypress test cases, the execution fails with an error related to SQLite.
+The project does NOT use SQLite. It uses MySQL via DDEV, and all DB credentials are correctly defined in settings.ddev.php.
+This issue only occurs during Cypress execution.
+Your Objectives
+Determine why SQLite is being referenced during Cypress runs.
+Identify whether Cypress is:
+Hitting a different base URL
+Using a different environment
+Triggering Drupal without settings.ddev.php
+Running against a separate test container or database
+Provide steps to verify which database Drupal is actually using during Cypress execution.
+Provide a step-by-step solution to ensure Cypress runs against the DDEV MySQL database.
+Suggest debugging commands or configuration checks (DDEV, Drupal settings, Cypress config).
+Highlight common misconfigurations in Drupal + DDEV + Cypress setups that could cause this issue.
+Expected Output
+Root cause analysis possibilities
+Verification steps
+Configuration fixes
+Concrete commands where applicable
+Best practice setup for Drupal + DDEV + Cypress integration
+Do not provide generic advice. Provide actionable, technical steps.
