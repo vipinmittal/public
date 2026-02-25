@@ -1,31 +1,30 @@
-You are a senior DevOps + Drupal + Cypress expert.
-Your task is to analyze and resolve a database mismatch issue occurring during Cypress test execution.
-Project Context
-Application: Drupal (PHP), using Canvas module
-Local environment: DDEV
-Database: MySQL
-Database configuration: settings.ddev.php
-The application runs correctly in the browser via DDEV
-Tests are executed using Cypress
-Problem Statement
-When running Cypress test cases, the execution fails with an error related to SQLite.
-The project does NOT use SQLite. It uses MySQL via DDEV, and all DB credentials are correctly defined in settings.ddev.php.
-This issue only occurs during Cypress execution.
-Your Objectives
-Determine why SQLite is being referenced during Cypress runs.
-Identify whether Cypress is:
-Hitting a different base URL
-Using a different environment
-Triggering Drupal without settings.ddev.php
-Running against a separate test container or database
-Provide steps to verify which database Drupal is actually using during Cypress execution.
-Provide a step-by-step solution to ensure Cypress runs against the DDEV MySQL database.
-Suggest debugging commands or configuration checks (DDEV, Drupal settings, Cypress config).
-Highlight common misconfigurations in Drupal + DDEV + Cypress setups that could cause this issue.
-Expected Output
-Root cause analysis possibilities
-Verification steps
-Configuration fixes
-Concrete commands where applicable
-Best practice setup for Drupal + DDEV + Cypress integration
-Do not provide generic advice. Provide actionable, technical steps.
+I want to replicate the exact CI failure locally.
+I suspect the failure may be related to database configuration (CI might be using SQLite while my local setup uses MySQL), but I am not sure.
+What I Need From You
+Analyze the upstream .gitlab-ci.yml file and determine:
+What database type is being used in CI
+How Drupal is being installed in the pipeline
+How Cypress tests are executed
+Inspect my local DDev environment and confirm:
+Current database driver
+Whether SQLite is available in the PHP container
+Determine whether I need:
+To switch entirely to SQLite
+Or create a separate SQLite test install
+Or keep MySQL and adjust Cypress config only
+Provide step-by-step commands to:
+Replicate the CI environment locally
+Install Drupal the same way CI does
+Run the same Cypress tests locally
+Match environment variables used in CI (if any)
+Identify what changes (if any) are required in:
+settings.php
+settings.ddev.php
+Cypress configuration
+Environment variables
+Important Constraints
+Do NOT break my existing MySQL DDev setup.
+If SQLite is needed, create a separate test configuration.
+Ensure the local setup mimics the CI pipeline behavior as closely as possible.
+Provide terminal commands I can run directly.
+The objective is to reproduce the exact pipeline failure locally so I can debug and fix it.
