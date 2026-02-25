@@ -1,3 +1,19 @@
+I need help replicating a failing Drupal CI pipeline locally using DDev.
+Context
+The GitLab pipeline job is failing here:
+https://git.drupalcode.org/issue/canvas-3573096/-/jobs/8632706
+The upstream CI configuration file:
+https://git.drupalcode.org/project/canvas/-/raw/1.x/.gitlab-ci.yml?ref_type=heads
+My local project directory:
+/Users/drupal/Documents/Code/cms/web/
+My database settings directory:
+/Users/drupal/Documents/Code/cms/web/sites/default
+Local environment:
+Using DDev
+Database: MySQL (already configured and working)
+Drupal site works via browser
+Canvas module contains Cypress tests
+Goal
 I want to replicate the exact CI failure locally.
 I suspect the failure may be related to database configuration (CI might be using SQLite while my local setup uses MySQL), but I am not sure.
 What I Need From You
