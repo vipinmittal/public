@@ -1,46 +1,31 @@
-I need help replicating a failing Drupal CI pipeline locally using DDev.
-Context
-The GitLab pipeline job is failing here:
-https://git.drupalcode.org/issue/canvas-3573096/-/jobs/8632706
-The upstream CI configuration file:
-https://git.drupalcode.org/project/canvas/-/raw/1.x/.gitlab-ci.yml?ref_type=heads
-My local project directory:
-/Users/drupal/Documents/Code/cms/web/
-My database settings directory:
-/Users/drupal/Documents/Code/cms/web/sites/default
-Local environment:
-Using DDev
-Database: MySQL (already configured and working)
-Drupal site works via browser
-Canvas module contains Cypress tests
-Goal
-I want to replicate the exact CI failure locally.
-I suspect the failure may be related to database configuration (CI might be using SQLite while my local setup uses MySQL), but I am not sure.
-What I Need From You
-Analyze the upstream .gitlab-ci.yml file and determine:
-What database type is being used in CI
-How Drupal is being installed in the pipeline
-How Cypress tests are executed
-Inspect my local DDev environment and confirm:
-Current database driver
-Whether SQLite is available in the PHP container
-Determine whether I need:
-To switch entirely to SQLite
-Or create a separate SQLite test install
-Or keep MySQL and adjust Cypress config only
-Provide step-by-step commands to:
-Replicate the CI environment locally
-Install Drupal the same way CI does
-Run the same Cypress tests locally
-Match environment variables used in CI (if any)
-Identify what changes (if any) are required in:
-settings.php
-settings.ddev.php
-Cypress configuration
-Environment variables
-Important Constraints
-Do NOT break my existing MySQL DDev setup.
-If SQLite is needed, create a separate test configuration.
-Ensure the local setup mimics the CI pipeline behavior as closely as possible.
-Provide terminal commands I can run directly.
-The objective is to reproduce the exact pipeline failure locally so I can debug and fix it.
+We are facing an issue in a React-based multi-valued date field component with drag-and-drop reordering.
+🔍 Current Behavior
+We have a date input field inside a multi-valued (repeatable) field component.
+❌ Problem Scenario
+User enters only the day (e.g., 26)
+Month and Year are not selected yet.
+User tries to reorder the items (drag & drop).
+After reordering, the entered day value vanishes.
+✅ Working Scenario
+User enters a complete date (Day + Month + Year).
+User reorders the items.
+The value persists correctly.
+🛠 Tech Stack
+React
+Multi-valued repeatable component
+Drag-and-drop reordering
+Controlled inputs (state-driven)
+❓ What We Need Help With
+We need help identifying:
+Why the value disappears when only the day is entered.
+Whether this is related to:
+Controlled vs uncontrolled input behavior
+State updates during reordering
+Using array index as React key
+Component remounting during drag
+Date validation logic resetting incomplete values
+Serialization/parsing issues when date is incomplete
+🎯 Expected Behavior
+Even if only the day is entered (without month and year), the value should remain preserved.
+Reordering should not reset or clear partially entered values.
+Component state should remain stable across drag operations.
