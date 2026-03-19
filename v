@@ -37,3 +37,8 @@
 “So first, I’ll move the component out of the folder.”
 
 “Now that the folder is empty, I can open the menu again and delete the folder.”
+Similarly, folders can also be managed in code components and patterns
+  
+“And that’s how folders can be used in Drupal Canvas to better organize and manage components.”
+
+Thanks for watching, and happy Drupaling with Drupal Canvas.
