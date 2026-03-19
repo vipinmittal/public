@@ -1,84 +1,39 @@
-1. Introduction
+“First, I’m opening Drupal Canvas and navigating to the Library section.”
 
-I would like to talk about Vishal and the impact he has made on our team.
+“Before Canvas 1.2.0, components used to be displayed as a list.”
 
-I have had the opportunity to work closely with him on multiple initiatives.
+“Now, starting with Canvas 1.2.0, components can be organized into folders.”
 
-Throughout this time, I have consistently seen strong technical leadership, deep Drupal expertise, and a collaborative mindset.
+“To create a folder, I click on the New button and select Add folder.”
 
-2. Technical Expertise (Drupal Skills)
+“Now I’m entering the folder name and creating it.”
 
-Vishal has exceptional expertise in Drupal development.
+“You can see the count next to the folder is currently zero because the folder is empty.”
 
-He has a deep understanding of architecture, best practices, and scalable solutions.
+“Next, I’m dragging and dropping a component into the folder.”
 
-Whenever we face a complex problem, he is often the person the team looks to for the best technical approach.
+“Now the count has increased, which shows that the folder contains a component.”
 
-His ability to quickly analyze problems and propose optimal solutions is extremely valuable.
+“This drag-and-drop functionality also works between folders.”
 
-3. Contributions to Projects
-Case CMS
+“So if there are multiple folders, I can move a component from one folder to another folder.”
 
-When we started working on Case CMS, Vishal played a major role.
+“In this way, components can be organized more easily across different folders.”
 
-Many of the standards and technical approaches for Case CMS were defined by him.
+“I can also move a component out of a folder whenever needed.”
 
-His work helped create strong foundations for the project.
+“I can expand the folder to view the component inside.”
 
-Canvas Module
+“I can also collapse the folder again.”
 
-When we moved to the Canvas initiative, Vishal continued to provide strong technical guidance.
+“Now I’m clicking the three-dot menu for more options.”
 
-From the early stages, he contributed valuable ideas, architecture suggestions, and implementation strategies.
+“From here, I can rename the folder.”
 
-The team often looks forward to his input when discussing approaches or solving complex problems.
+“I’ll enter a new name, and now the folder has been renamed.”
 
-4. Collaboration & Team Influence
+“If I open the three-dot menu again, you’ll notice that I cannot delete the folder because it still contains a component.”
 
-Vishal is not only technically strong but also highly respected within the team.
+“So first, I’ll move the component out of the folder.”
 
-He consistently shares knowledge and helps others find better solutions.
-
-His presence often improves the overall quality of discussions and technical decisions.
-
-He naturally contributes to raising the technical bar for the entire team.
-
-5. Achievements & OKR Contributions
-
-Vishal has contributed significantly to multiple OKRs we worked on together.
-
-Many of those goals were successfully achieved with his technical contributions.
-
-His work directly supported project delivery, technical quality, and team efficiency.
-
-6. Potential & Growth
-
-Vishal has strong potential to drive innovation and technical excellence.
-
-I believe his energy and capability can be even more impactful when focused on advanced development and innovative work.
-
-He has the ability to shape technical direction and influence larger engineering efforts.
-
-7. Career Progression
-
-Vishal currently holds the role of Staff Software Engineer.
-
-Based on his experience, technical leadership, and contributions, he absolutely demonstrates the qualities of a Principal Software Engineer.
-
-In my view, his work and impact are already aligned with principal-level expectations.
-
-8. Personal Reflection
-
-I personally have always looked forward to Vishal’s input when approaching complex problems.
-
-Working with him has been a great learning experience.
-
-His approach to problem solving, architecture, and collaboration makes him a valuable asset to any engineering team.
-
-9. Closing Statement
-
-Overall, Vishal has made significant contributions across projects, team growth, and technical excellence.
-
-I truly appreciate the opportunity to have worked with him.
-
-I strongly believe he will continue to drive impactful engineering outcomes wherever he contributes.
+“Now that the folder is empty, I can open the menu again and delete the folder.”
