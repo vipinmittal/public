@@ -1,44 +1,125 @@
-“First, I’m opening Drupal Canvas and navigating to the Library section.”
+Absolutely — here’s a cleaner documentation draft you can use as a manual.
 
-“Before Canvas 1.2.0, components used to be displayed as a list.”
+Multi-Value Properties in Code Components
 
-“Now, starting with Canvas 1.2.0, components can be organized into folders.”
+This document describes support for multi-value properties in code components.
 
-“To create a folder, I click on the New button and select Add folder.”
+In the Library section, component builders can create a code component and define its props. Previously, props only supported a single value. With this enhancement, supported prop types can now accept multiple values.
 
-“Now I’m entering the folder name and creating it.”
+Overview
 
-“You can see the count next to the folder is currently zero because the folder is empty.”
+Multi-value properties allow builders to configure a prop so that it can store more than one value instead of just one.
 
-“Next, I’m dragging and dropping a component into the folder.”
+This is useful for prop types where multiple entries may be needed, such as:
 
-“Now the count has increased, which shows that the folder contains a component.”
+multiple text values
 
-“This drag-and-drop functionality also works between folders.”
+multiple images
 
-“So if there are multiple folders, I can move a component from one folder to another folder.”
+multiple links
 
-“In this way, components can be organized more easily across different folders.”
+multiple numbers
 
-“I can also move a component out of a folder whenever needed.”
+The multi-value option is available only for supported prop types.
 
-“I can expand the folder to view the component inside.”
+Supported Prop Types
 
-“I can also collapse the folder again.”
+The following prop types support multi-value properties:
 
-“Now I’m clicking the three-dot menu for more options.”
+Text
 
-“From here, I can rename the folder.”
+Link
 
-“I’ll enter a new name, and now the folder has been renamed.”
+Image
 
-“If I open the three-dot menu again, you’ll notice that I cannot delete the folder because it still contains a component.”
+Video
 
-“So first, I’ll move the component out of the folder.”
+Integer
 
-“Now that the folder is empty, I can open the menu again and delete the folder.”
-Similarly, folders can also be managed in code components and patterns
-  
-“And that’s how folders can be used in Drupal Canvas to better organize and manage components.”
+Number
 
-Thanks for watching, and happy Drupaling with Drupal Canvas.
+Date
+
+List (Text)
+
+List (Integer)
+
+Unsupported Prop Types
+
+The following prop types do not support multi-value properties:
+
+Formatted Text
+
+Boolean
+
+For these prop types, the Allow multiple values option must not be displayed.
+
+Multi-Value Configuration
+
+The UI allows component builders to decide whether a prop supports multiple values and, if enabled, whether the values are limited or unlimited.
+
+Allow Multiple Values
+
+A checkbox labeled Allow multiple values is used to enable multi-value support.
+
+Behavior:
+
+Visible only for supported prop types
+
+Hidden for unsupported prop types
+
+Unchecked by default
+
+Reset to unchecked when switching prop types
+
+Value Limit Selection
+
+When Allow multiple values is checked, an additional control is shown to define how multiple values are handled.
+
+The available options are:
+
+Limited
+
+Unlimited
+
+Limited Values
+
+When Limited is selected:
+
+A numeric input is displayed
+
+The builder defines the maximum number of allowed values
+
+Example values are shown as fixed rows
+
+No delete icon is displayed for example values
+
+Drag and drop is available for reordering values
+
+Expected behavior
+
+Users can reorder values using drag and drop
+
+Users cannot remove example rows using a delete action
+
+The number of values is controlled by the configured limit
+
+Unlimited Values
+
+When Unlimited is selected:
+
+No numeric limit input is displayed
+
+Each example value includes a delete icon
+
+A + Add value button is shown
+
+Drag and drop is available for reordering values
+
+Expected behavior
+
+Users can add new values dynamically
+
+Users can delete individual values
+
+Users can reorder values using drag and drop
