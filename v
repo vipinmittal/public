@@ -1,125 +1,40 @@
-Absolutely — here’s a cleaner documentation draft you can use as a manual.
+Act as a senior Drupal core/contrib maintainer.
 
-Multi-Value Properties in Code Components
+I need you to make the `lightning_workflow` module Drupal 11 compatible.
 
-This document describes support for multi-value properties in code components.
+Situation:
+- An old patch already exists for Drupal 11 support, but it is outdated and must be revised.
+- The CI/pipeline is currently failing.
+- Your goal is to apply the intent of the old patch, then fully debug and fix all remaining Drupal 11 compatibility issues.
 
-In the Library section, component builders can create a code component and define its props. Previously, props only supported a single value. With this enhancement, supported prop types can now accept multiple values.
+What I want from you:
+- Review the current module code and the existing patch.
+- Determine which parts of the old patch are still valid and which parts must be changed.
+- Update the module so it works on Drupal 11.
+- Resolve pipeline failures, including code errors, deprecations, test failures, and dependency issues.
+- Produce an implementation-ready diff/patch.
 
-Overview
+Please specifically check:
+- `lightning_workflow.info.yml`
+- `composer.json`
+- service definitions
+- plugin annotations/attributes if relevant
+- event subscribers
+- hooks and entity APIs
+- Workflows / Content Moderation integration
+- deprecated APIs removed in Drupal 11
+- PHPUnit/Kernel/Functional tests
+- coding standards or static analysis failures if they affect pipeline success
 
-Multi-value properties allow builders to configure a prop so that it can store more than one value instead of just one.
+Output required:
+1. Brief assessment of the old patch
+2. Each failure/problem found
+3. The fix for each problem with reasoning
+4. Final revised patch/diff
+5. Validation steps to confirm Drupal 11 compatibility
 
-This is useful for prop types where multiple entries may be needed, such as:
-
-multiple text values
-
-multiple images
-
-multiple links
-
-multiple numbers
-
-The multi-value option is available only for supported prop types.
-
-Supported Prop Types
-
-The following prop types support multi-value properties:
-
-Text
-
-Link
-
-Image
-
-Video
-
-Integer
-
-Number
-
-Date
-
-List (Text)
-
-List (Integer)
-
-Unsupported Prop Types
-
-The following prop types do not support multi-value properties:
-
-Formatted Text
-
-Boolean
-
-For these prop types, the Allow multiple values option must not be displayed.
-
-Multi-Value Configuration
-
-The UI allows component builders to decide whether a prop supports multiple values and, if enabled, whether the values are limited or unlimited.
-
-Allow Multiple Values
-
-A checkbox labeled Allow multiple values is used to enable multi-value support.
-
-Behavior:
-
-Visible only for supported prop types
-
-Hidden for unsupported prop types
-
-Unchecked by default
-
-Reset to unchecked when switching prop types
-
-Value Limit Selection
-
-When Allow multiple values is checked, an additional control is shown to define how multiple values are handled.
-
-The available options are:
-
-Limited
-
-Unlimited
-
-Limited Values
-
-When Limited is selected:
-
-A numeric input is displayed
-
-The builder defines the maximum number of allowed values
-
-Example values are shown as fixed rows
-
-No delete icon is displayed for example values
-
-Drag and drop is available for reordering values
-
-Expected behavior
-
-Users can reorder values using drag and drop
-
-Users cannot remove example rows using a delete action
-
-The number of values is controlled by the configured limit
-
-Unlimited Values
-
-When Unlimited is selected:
-
-No numeric limit input is displayed
-
-Each example value includes a delete icon
-
-A + Add value button is shown
-
-Drag and drop is available for reordering values
-
-Expected behavior
-
-Users can add new values dynamically
-
-Users can delete individual values
-
-Users can reorder values using drag and drop
+Important:
+- Do not just describe what should be done — actually produce the revised code changes.
+- Prefer minimal, clean, maintainable changes.
+- Keep backward compatibility in mind only where reasonable, but prioritize Drupal 11 support and passing pipeline checks.
+- Call out any assumptions clearly.
