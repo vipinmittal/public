@@ -1,19 +1,54 @@
-Please revisit the Drupal 11 compatibility patch for `lightning_workflow`.
+(function () {
+  // You can change values here or bind dynamically if Canvas provides data
+  const values = ["React", "Drupal", "Tailwind", "JavaScript", "UI Component"];
 
-In the current approach, Quick Edit v1 support appears to have been removed. I do not want the functionality to be removed if there is a supported upgrade path. I can see that Quick Edit v2 is available, so please investigate whether the existing Quick Edit integration can be migrated to Quick Edit v2 instead.
+  function renderTags(containerId, items) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
-Tasks:
-- Check whether Quick Edit v2 is the correct supported version for Drupal 11.
-- Replace the old Quick Edit v1 integration with Quick Edit v2 wherever possible.
-- If related functionality breaks because of that migration, fix those places too.
-- Update dependencies, integrations, service references, code paths, and tests as needed.
-- Ensure the pipeline passes after the update.
+    container.innerHTML = items
+      .map(
+        (item) => `
+        <span class="tag-chip">
+          ${item}
+        </span>
+      `
+      )
+      .join("");
+  }
 
-Please do not stop at analysis. I want implementation-ready changes and the final patch/diff.
+  // Create container dynamically (or use existing one if you prefer)
+  const root = document.createElement("div");
+  root.id = "multi-text-component";
+  root.className = "tag-container";
 
-In your response, include:
-- your assessment of whether Quick Edit v2 should be used
-- all impacted files/modules/functionality
-- the exact fixes made
-- the final revised patch/diff
-- any follow-up risks or limitations
+  document.currentScript.parentNode.appendChild(root);
+
+  renderTags("multi-text-component", values);
+})();
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.tag-chip {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.tag-chip:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
