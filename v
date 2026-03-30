@@ -1,54 +1,19 @@
-(function () {
-  // You can change values here or bind dynamically if Canvas provides data
-  const values = ["React", "Drupal", "Tailwind", "JavaScript", "UI Component"];
+Hi Team,
 
-  function renderTags(containerId, items) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
+I’d like to invite you to a demo session where I’ll walk through the **Multi-Value Props** functionality that we’ve been working on.
 
-    container.innerHTML = items
-      .map(
-        (item) => `
-        <span class="tag-chip">
-          ${item}
-        </span>
-      `
-      )
-      .join("");
-  }
+**Agenda for the session:**
 
-  // Create container dynamically (or use existing one if you prefer)
-  const root = document.createElement("div");
-  root.id = "multi-text-component";
-  root.className = "tag-container";
+* Overview of Multi-Value Props
+* What has been implemented so far
+* How it works (live demo)
+* Current limitations / what is not working
+* Accepted behaviors and expected usage patterns
+* Open questions and feedback discussion
 
-  document.currentScript.parentNode.appendChild(root);
+This session will provide a clear understanding of the current state of the feature and help align on next steps.
 
-  renderTags("multi-text-component", values);
-})();
+Looking forward to your participation and feedback.
 
-.tag-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 12px;
-  background: #f9fafb;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-}
-
-.tag-chip {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: #ffffff;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 999px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  cursor: default;
-}
-
-.tag-chip:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+Best regards,
+VM
